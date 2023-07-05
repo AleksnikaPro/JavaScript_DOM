@@ -276,7 +276,7 @@
         flex-direction: column;
     }
 
-    
+
     &__title {
         @include font-lato-regular(16px, 19px);
         text-align: center;
@@ -334,18 +334,43 @@
 
     }
 
-    &__item {
-        position: relative;
-        background: #F8F8F8;
-        
-        &:hover .content-products__image {
-            filter: brightness(0.5);
+    &__button {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        margin-top: 48px;
+    }
+
+    &__browse {
+        @include font-lato-regular(16px, 19px);
+        color: $mainDeepColorOfSite;
+        border: 1px solid #FF6A6A;
+        padding: 15px 39px 14px 39px;
+        text-decoration: none;
+        background: none;
+        cursor: pointer;
+        @include transition-fast();
+
+        &:hover {
+            color: $lightColorOfSite;
+            background: $mainDeepColorOfSite;
             @include transition-slow();
         }
+    }
 
-        &:hover .content-products__add {
-            display: flex;
-        }
+}
+
+.item {
+    position: relative;
+    background: #F8F8F8;
+
+    &:hover .item__image {
+        filter: brightness(0.5);
+        @include transition-slow();
+    }
+
+    &:hover .item__add {
+        display: flex;
     }
 
     &__image {
@@ -366,9 +391,8 @@
         justify-content: center;
         gap: 11px;
         color: $lightColorOfSite;
-        visibility: hidden;
-        // display: none;
-        @include transition-fast();     
+        display: none;
+        @include transition-fast();
 
 
         &:hover {
@@ -383,7 +407,6 @@
 
 
     }
-
 
     &__content {
         display: flex;
@@ -413,31 +436,16 @@
         margin: 0;
     }
 
-    &__button {
-        display: grid;
-        justify-content: center;
-        align-content: center;
-        margin-top: 48px;
-    }
-
-    &__browse {
-        @include font-lato-regular(16px, 19px);
-        color: $mainDeepColorOfSite;
-        border: 1px solid #FF6A6A;
-        padding: 15px 39px 14px 39px;
-        text-decoration: none;
-        background: none;
-        cursor: pointer;
-        @include transition-fast();
-
-        &:hover {
-            color: $lightColorOfSite;
-            background: $mainDeepColorOfSite;
-            @include transition-slow();
-        }
-    }
 
 }
+
+
+
+
+
+
+
+
 
 .footer-advantages {
     display: grid;
@@ -524,7 +532,7 @@
 
     }
 
-    &__box{
+    &__box {
         margin-bottom: 32px;
     }
 

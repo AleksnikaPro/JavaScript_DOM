@@ -272,13 +272,13 @@ with extensive models.
 
             //создаем карточки товаров
             productInfo.forEach(productElement => {
-                 //div content-products__item
+                 //div item
                 const contentProductsItem = document.createElement('div');
-                contentProductsItem.classList.add('content-products__item');
+                contentProductsItem.classList.add('item');
                 contentProductsItems.append(contentProductsItem);
 
                 const contentProductsImage = document.createElement('img');
-                contentProductsImage.classList.add('content-products__image');
+                contentProductsImage.classList.add('item__image');
                 contentProductsImage.setAttribute('src', 'alt');
                 contentProductsImage.src = `${productElement.image}`;
                 contentProductsImage.alt = 'item photo';
@@ -286,30 +286,30 @@ with extensive models.
 
                 //div content-products__content
                 const contentProductsContent = document.createElement('div');
-                contentProductsContent.classList.add('content-products__content');
+                contentProductsContent.classList.add('item__content');
                 contentProductsItem.append(contentProductsContent);
 
                 const contentProductsName = document.createElement('a');
-                contentProductsName.classList.add('content-products__name');
+                contentProductsName.classList.add('item__name');
                 contentProductsName.setAttribute('href','#');
                 contentProductsName.setAttribute('title', 'link to the product');
                 contentProductsName.textContent = `${productElement.name}`;
                 contentProductsContent.append(contentProductsName);
 
                 const contentProductsDescription = document.createElement('p');
-                contentProductsDescription.classList.add('content-products__description');
+                contentProductsDescription.classList.add('item__description');
                 contentProductsDescription.textContent = `${productElement.description}`;
                 contentProductsContent.append(contentProductsDescription);
         
                 const contentProductsPrice = document.createElement('p');
-                contentProductsPrice.classList.add('content-products__price');
+                contentProductsPrice.classList.add('item__price');
                 contentProductsPrice.textContent = productElement.currency + productElement.price;
                 contentProductsContent.append(contentProductsPrice);
                        
 
-                //button content-products__add
+                //button item__add
                 const contentProductsAdd = document.createElement('button');
-                contentProductsAdd.classList.add('content-products__add');
+                contentProductsAdd.classList.add('item__add');
                 contentProductsAdd.setAttribute('type', 'button');
                 contentProductsAdd.setAttribute('name', 'button');
                 contentProductsItem.append(contentProductsAdd);            
