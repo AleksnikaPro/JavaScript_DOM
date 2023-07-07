@@ -334,20 +334,30 @@ summary::-webkit-details-marker {
 }
 
 .cart-content {
-  display: grid;
-  grid-template-columns: 652px 360px;
-  grid-template-rows: repeat 2, 1fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  grid-column-gap: 128px;
-  grid-row-gap: 72px;
-  padding-top: 96px;
-  padding-bottom: 128px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.cart-content__title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #222222;
+  margin: 0;
+  margin: 20px 0px 20px 0px;
 }
 .cart-content__items {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  max-width: 652px;
+  max-height: auto;
+  position: relative;
 }
 .cart-content__item {
   display: flex;

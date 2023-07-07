@@ -3,27 +3,27 @@
 
 
 .cart-content {
-    display: grid;
-    grid-template-columns: 652px 360px;
-    grid-template-rows: repeat (2, 1fr);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    grid-column-gap: 128px;
-    grid-row-gap: 72px;
-    padding-top: 96px;
-    padding-bottom: 128px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     &__title{
         @include font-lato-regular(30px, 36px);
         text-align: center;
         color: $darkColorOfSite;
-        margin: 0px 0px 6px 0px;
+        margin: 0;
+        margin: 20px 0px 20px 0px;
     }
 
     &__items {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        max-width: 652px;
+        max-height: auto;
+        position: relative;
     }
 
     &__item {
